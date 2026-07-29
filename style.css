@@ -96,81 +96,26 @@ a{
 
 /* Mobile */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .navbar{
-    flex-direction:column;
-    padding:20px;
+    flex-direction:row;
+    padding:10px 12px;
+}
+
+.logo h2{
+    font-size:16px;
 }
 
 .nav-links{
-    flex-direction:column;
-    gap:12px;
-    margin-top:15px;
+    display:none;
 }
-
-}
-
-
 
 #darkBtn{
-
-    margin-left:15px;
-
-}/* ======================
-   Hero Section
-====================== */
-
-
-.hero{
-
-    background:linear-gradient(135deg,#0057ff,#00c6ff);
-    color:white;
-    padding:50px 20px;
-    margin-bottom:30px;
-
+    margin-left:auto;
+    width:45px;
+    height:40px;
 }
-
-
-
-.hero h1{
-
-    color:white;
-    font-size:38px;
-
-}
-
-
-
-.hero p{
-
-    color:white;
-    font-size:22px;
-
-}
-
-
-
-.hire-btn{
-
-    background:black;
-    color:white;
-    padding:12px 30px;
-    border:none;
-    border-radius:25px;
-    font-size:18px;
-    cursor:pointer;
-    transition:0.3s;
-
-}
-
-
-
-.hire-btn:hover{
-
-    background:white;
-    color:black;
-    transform:scale(1.05);
 
 }
 
@@ -550,7 +495,24 @@ footer p{
     color:white;
 
 }
+.dark .education p,
+.dark .certificates p{
 
+    background:#333;
+    color:white;
+
+}.dark .contact{
+    background:#222;
+    color:white;
+}
+
+.dark .contact h2{
+    color:white;
+}
+
+.dark .contact p{
+    color:white;
+}
 
 
 
@@ -562,12 +524,7 @@ footer p{
 @media(max-width:600px){
 
 
-nav a{
 
-    display:block;
-    margin:12px;
-
-}
 
 
 
@@ -621,7 +578,7 @@ button{
 .hero{
     background:linear-gradient(135deg,#0057ff,#00c6ff);
     color:#fff;
-    padding:80px 20px;
+    padding:40px 20px;
 }
 
 .hero-img{
@@ -679,4 +636,23 @@ button{
 .hire-btn:hover,
 .cv-btn:hover{
     transform:translateY(-3px);
+}@media (max-width:768px){
+
+.hero-img{
+    width:140px;
+    height:140px;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.hero h2{
+    font-size:20px;
+}
+
+.hero-text{
+    font-size:16px;
+}
+
 }
