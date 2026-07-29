@@ -53,43 +53,61 @@ a{
 
 
 /* ======================
-   Navigation
+   Professional Navigation
 ====================== */
 
-
-nav{
-
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     background:#111;
-    padding:15px;
-    border-radius:0 0 20px 20px;
-
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
-
-
-nav h2{
-
-    color:white;
-    margin:0 0 15px;
-
+.logo h2{
+    color:#fff;
+    margin:0;
 }
 
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
 
-
-nav a{
-
-    color:white;
-    margin:10px;
-    font-size:18px;
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
     font-weight:bold;
-
+    transition:.3s;
 }
 
+.nav-links a:hover{
+    color:#00c6ff;
+}
 
+#darkBtn{
+    margin-left:10px;
+}
 
-nav a:hover{
+/* Mobile */
 
-    color:#00ffff;
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    padding:20px;
+}
+
+.nav-links{
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
+}
 
 }
 
@@ -596,4 +614,69 @@ button{
 
 
 
+}/* ======================
+   Hero Section
+====================== */
+
+.hero{
+    background:linear-gradient(135deg,#0057ff,#00c6ff);
+    color:#fff;
+    padding:80px 20px;
+}
+
+.hero-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 0 25px rgba(255,255,255,.4);
+    margin-bottom:20px;
+}
+
+.hero h1{
+    color:white;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#ffe600;
+    margin-bottom:15px;
+}
+
+.hero-text{
+    font-size:20px;
+    margin:20px auto;
+    max-width:700px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.hire-btn,
+.cv-btn{
+    padding:12px 28px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hire-btn{
+    background:#25D366;
+    color:white;
+}
+
+.cv-btn{
+    background:white;
+    color:#0057ff;
+}
+
+.hire-btn:hover,
+.cv-btn:hover{
+    transform:translateY(-3px);
 }
