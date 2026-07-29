@@ -167,4 +167,10 @@ if(count){
     count.innerHTML = visitors;
 
 
+}// ======================
+// Mobile Menu
+// ======================
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
 }
