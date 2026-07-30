@@ -1,176 +1,712 @@
-// ======================
-// Preloader
-// ======================
+/* ======================
+   General Settings
+====================== */
 
 
-window.onload = function(){
+*{
+    box-sizing:border-box;
+}
 
 
-    let loader = document.getElementById("preloader");
+body{
 
-
-    if(loader){
-
-
-        loader.style.display = "none";
-
-
-    }
-
-
-};
-
-
-
-
-// ======================
-// Typing Effect
-// ======================
-
-
-let text = "Electrician | Industrial Electrical Maintenance | Web Development Learner";
-
-
-let index = 0;
-
-
-let typingBox = document.getElementById("typing");
-
-
-
-function typing(){
-
-
-    if(typingBox && index < text.length){
-
-
-        typingBox.innerHTML += text.charAt(index);
-
-
-        index++;
-
-
-        setTimeout(typing,100);
-
-
-    }
-
+    background:#f2f2f2;
+    font-family:Arial, sans-serif;
+    margin:0;
+    text-align:center;
+    color:#333;
 
 }
 
 
 
-if(typingBox){
-    typing();
-};// ======================
-// Dark Mode
-// ======================
+h1{
 
-
-function toggleDarkMode(){
-
-
-    document.body.classList.toggle("dark");
-
-
-}// ======================
-// Top Button
-// ======================
-
-
-let topBtn = document.getElementById("topBtn");
-
-
-
-window.onscroll = function(){
-
-
-    if(document.documentElement.scrollTop > 200){
-
-
-        if(topBtn){
-
-            topBtn.style.display = "block";
-
-        }
-
-
-    }else{
-
-
-        if(topBtn){
-
-            topBtn.style.display = "none";
-
-        }
-
-
-    }
-
-
-};
-
-
-
-
-function topFunction(){
-
-
-    window.scrollTo({
-
-
-        top:0,
-
-        behavior:"smooth"
-
-
-    });
-
-
-}// ======================
-// Visitor Counter
-// ======================
-
-
-let visitors = localStorage.getItem("visitors");
-
-
-
-if(visitors == null){
-
-
-    visitors = 1;
-
-
-}else{
-
-
-    visitors++;
-
+    color:#0057ff;
 
 }
 
 
 
-localStorage.setItem("visitors", visitors);
+h2{
+
+    color:#007b00;
+
+}
+
+
+
+p{
+
+    line-height:1.6;
+
+}
+
+
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+
+/* ======================
+   Professional Navigation
+====================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#111;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo h2{
+    color:#fff;
+    margin:0;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00c6ff;
+}
+
+#darkBtn{
+    margin-left:10px;
+}
+
+/* Mobile Navigation */
+@media (max-width:768px){
+
+    .navbar{
+        flex-wrap:wrap;
+        padding:10px 15px;
+    }
+
+    .logo h2{
+        font-size:18px;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        color:#fff;
+        cursor:pointer;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        background:#111;
+        margin-top:10px;
+        padding:10px 0;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a,
+    .nav-links button{
+        width:100%;
+        text-align:center;
+        padding:12px;
+        border:none;
+        background:none;
+        color:#fff;
+    }
+
+    #darkBtn{
+        width:100%;
+    }
+}
+
+
+
+/* ======================
+   Common Cards
+====================== */
+
+
+.card,
+.skills,
+.services,
+.contact,
+.projects,
+.experience,
+.certificates,
+.education,
+.tools,
+.gallery,
+.visitors,
+.why,
+.calculator,
+.todo{
+
+
+    background:white;
+    width:350px;
+    margin:30px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 15px #aaa;
+    transition:0.3s;
+
+}
+
+
+
+.card:hover,
+.skills:hover,
+.services:hover,
+.projects:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* ======================
+   Profile Image
+====================== */
+
+
+.card img{
+
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #0057ff;
+
+}
+
+
+
+.card p{
+
+    font-size:17px;
+
+}/* ======================
+   Skills & Service Cards
+====================== */
+
+
+.skill-card,
+.service-card,
+.tool-card,
+.project-card{
+
+    background:#ffffff;
+    margin:15px auto;
+    padding:20px;
+    border-radius:15px;
+    width:90%;
+    box-shadow:0 0 10px #ccc;
+    transition:0.3s;
+
+}
+
+
+
+.skill-card:hover,
+.service-card:hover,
+.tool-card:hover,
+.project-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 0 20px #888;
+
+}
+
+
+
+.skill-card h3,
+.service-card h3,
+.tool-card h3,
+.project-card h3{
+
+    color:#0057ff;
+
+}
+
+
+
+/* ======================
+   Gallery
+====================== */
+
+
+.gallery img{
+
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    margin:10px;
+    border-radius:15px;
+    transition:0.3s;
+
+}
+
+
+
+.gallery img:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* ======================
+   Experience Timeline
+====================== */
+
+
+.timeline-item{
+
+    background:#f9f9f9;
+    margin:20px 0;
+    padding:20px;
+    border-left:5px solid #0057ff;
+    border-radius:10px;
+    text-align:left;
+
+}
+
+
+
+.timeline-item h3{
+
+    color:#0057ff;
+
+}
+
+
+
+.timeline-item h4{
+
+    color:#008000;
+
+}/* ======================
+   Education & Certificates
+====================== */
+
+
+.education p,
+.certificates p{
+
+    background:#f8f8f8;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+    font-size:16px;
+
+}
+
+
+
+.education p:hover,
+.certificates p:hover{
+
+    background:#e8f0ff;
+
+}
 
 
 
 
-let count = document.getElementById("visitorCount");
+/* ======================
+   Buttons
+====================== */
+
+
+button{
+
+    background:#0057ff;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+
+}
 
 
 
-if(count){
+button:hover{
+
+    background:#003399;
+    transform:scale(1.05);
+
+}
 
 
-    count.innerHTML = visitors;
+
+/* ======================
+   Social Section
+====================== */
 
 
-}// ======================
-// Mobile Menu
-// ======================
+.social button{
 
-function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
+    margin:10px;
+
+}
+
+
+
+.social a{
+
+    display:inline-block;
+
+}
+
+
+
+
+/* ======================
+   Footer
+====================== */
+
+
+footer{
+
+    background:#111;
+    color:white;
+    padding:20px;
+    margin-top:40px;
+
+}
+
+
+
+footer p{
+
+    margin:5px;
+
+}
+
+
+
+
+/* ======================
+   Top Button
+====================== */
+
+
+#topBtn{
+
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:none;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+
+}/* ======================
+   Preloader
+====================== */
+
+
+#preloader{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+
+}
+
+
+
+.loader{
+
+    width:50px;
+    height:50px;
+    border:5px solid #ccc;
+    border-top:5px solid #0057ff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+
+}
+
+
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+/* ======================
+   Dark Mode
+====================== */
+
+
+.dark{
+
+    background:#111;
+    color:white;
+
+}
+
+
+
+.dark .card,
+.dark .skills,
+.dark .services,
+.dark .experience,
+.dark .education,
+.dark .certificates,
+.dark .tools,
+.dark .projects,
+.dark .gallery,
+.dark .visitors{
+
+    background:#222;
+    color:white;
+
+}
+
+
+
+.dark .skill-card,
+.dark .service-card,
+.dark .tool-card,
+.dark .project-card,
+.dark .timeline-item{
+
+    background:#333;
+    color:white;
+
+}
+.dark .education p,
+.dark .certificates p{
+
+    background:#333;
+    color:white;
+
+}.dark .contact{
+    background:#222;
+    color:white;
+}
+
+.dark .contact h2{
+    color:white;
+}
+
+.dark .contact p{
+    color:white;
+}
+
+
+
+/* ======================
+   Mobile Responsive
+====================== */
+
+
+@media(max-width:600px){
+
+
+
+
+
+
+.hero h1{
+
+    font-size:28px;
+
+}
+
+
+
+.card,
+.skills,
+.services,
+.contact,
+.projects,
+.experience,
+.certificates,
+.education,
+.tools,
+.gallery,
+.visitors{
+
+    width:90%;
+
+}
+
+
+
+.gallery img{
+
+    width:100px;
+    height:100px;
+
+}
+
+
+
+button{
+
+    width:auto;
+
+}
+
+
+
+}/* ======================
+   Hero Section
+====================== */
+
+.hero{
+    background:linear-gradient(135deg,#0057ff,#00c6ff);
+    color:#fff;
+    padding:40px 20px;
+}
+
+.hero-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 0 25px rgba(255,255,255,.4);
+    margin-bottom:20px;
+}
+
+.hero h1{
+    color:white;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#ffe600;
+    margin-bottom:15px;
+}
+
+.hero-text{
+    font-size:20px;
+    margin:20px auto;
+    max-width:700px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.hire-btn,
+.cv-btn{
+    padding:12px 28px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hire-btn{
+    background:#25D366;
+    color:white;
+}
+
+.cv-btn{
+    background:white;
+    color:#0057ff;
+}
+
+.hire-btn:hover,
+.cv-btn:hover{
+    transform:translateY(-3px);
+}/* ======================
+   Hero Mobile Responsive
+====================== */
+
+@media (max-width:768px){
+
+.hero-img{
+    width:140px;
+    height:140px;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.hero h2{
+    font-size:20px;
+}
+
+.hero-buttons button{
+    width:90%;
+    margin:8px 0;
+}
+
+}
+
+/* ======================
+   Dark Mode Text Fix
+====================== */
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark p{
+    color:white;
+}
+
+.dark .hero h1{
+    color:#fff;
+}
+
+.dark .hero h2{
+    color:#ffe600;
 }
