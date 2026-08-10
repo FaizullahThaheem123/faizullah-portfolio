@@ -3,686 +3,662 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Prayer</title>
 
-<title>Faizullah Thaheem | Electrician Portfolio</title>
+    <!-- Theme -->
+    <meta name="theme-color" content="#0B1622">
 
-<meta name="description" content="Faizullah Thaheem Professional Electrician Portfolio. Electrical Installation, Industrial Maintenance and Web Development Services.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
 
-<meta name="keywords" content="Electrician, Electrical Work, Industrial Electrician, Web Development">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<meta name="author" content="Faizullah Thaheem">
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="icon" type="image/png" href="logo.png">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
-
 <body>
 
+<div class="app">
 
-<div id="preloader">
+<!-- ===========================
+        HOME SCREEN
+============================ -->
 
-<div class="loader"></div>
+<section id="homeScreen">
 
-</div>
+<!-- =========================
+     HEADER
+========================== -->
+
+<header class="header">
 
 
-<!-- ======================
-     Navigation
-====================== -->
+    <!-- =========================
+         MY PRAYER CARD
+    ========================== -->
 
-<nav class="navbar">
+    <div class="header-card header-card-top">
 
-    <div class="logo">
-        <h2>⚡ Faizullah </h2>
-    </div>
-<div class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
 
-        <button onclick="toggleDarkMode()" id="darkBtn">
-            🌙
+        <!-- HOME -->
+
+        <button
+            class="home-btn"
+            onclick="location.href='index.html'">
+
+            <i class="fa-solid fa-house"></i>
+
         </button>
+
+
+        <!-- CENTER -->
+
+        <div class="prayer-title-group">
+
+            <h2 class="app-title">
+                My Prayer
+            </h2>
+
+
+            <!-- FAISAL MOSQUE -->
+
+            <div class="mosque-icon">
+
+                <img
+                    src="images/faisal-mosque.png"
+                    alt="Faisal Mosque">
+
+            </div>
+
+        </div>
+
+
+        <!-- SETTINGS -->
+
+        <button class="settings-btn">
+
+            <i class="fa-solid fa-gear"></i>
+
+        </button>
+
+
     </div>
+
+
+
+    <!-- =========================
+         ASSALAMUALAIKUM CARD
+    ========================== -->
+
+    <div class="header-card header-card-bottom">
+
+
+        <div class="welcome-location">
+
+            <p class="welcome-text">
+                Assalamu Alaikum 👋
+            </p>
+
+            <p
+                class="location"
+                id="locationName">
+
+                📍 Adil Pur
+
+            </p>
+
+        </div>
+
+
+        <!-- DUA BOY -->
+
+        <img
+            class="dua-boy"
+            src="images/dua-boy.png"
+            alt="Dua">
+
+
+    </div>
+
+
+</header>
+
+<!-- ===========================
+     DATE CARD
+============================ -->
+
+<section class="date-box">
+
+
+    <!-- MAKKAH -->
+
+    <div class="date-place date-makkah">
+
+        <img
+            src="images/makkah.png"
+            alt="Makkah">
+
+    </div>
+
+
+    <!-- DATE -->
+
+    <div class="date-content">
+
+        <h3 id="date">
+            Loading Date...
+        </h3>
+
+        <p id="islamic-date">
+            Loading Islamic Date...
+        </p>
+
+    </div>
+
+
+    <!-- MADINAH -->
+
+    <div class="date-place date-madinah">
+
+        <img
+            src="images/madinah.png"
+            alt="Madinah">
+
+    </div>
+
+
+</section>
+
+<!-- ===========================
+        LIVE CLOCK
+============================ -->
+
+<section class="clock-box">
+
+<h1 id="clock">
+00:00:00
+</h1>
+
+<p>
+Current Time
+</p>
+
+</section>
+
+<!-- ==========================
+NEXT PRAYER
+========================== -->
+
+<div class="next-prayer">
+
+    <!-- TOP LINE -->
+<div class="next-prayer-row">
+
+    <span class="next-prayer-label">
+        Next Prayer
+    </span>
+
+    <span class="next-prayer-label">
+        Left Time
+    </span>
+
+    <span class="next-prayer-label">
+        Jamaat
+    </span>
+
+</div>
+
+
+<!-- BOTTOM LINE -->
+<div class="next-prayer-row">
+
+    <span id="nextPrayerName" class="next-prayer-value">
+        Maghrib
+    </span>
+
+    <span id="countdown" class="next-prayer-value">
+        01:25:40
+    </span>
+
+    <span id="nextPrayerJamaat" class="next-prayer-value">
+        07:15 PM
+    </span>
+
+</div>
+
+
+<!-- ==========================
+PRAYER CARDS
+========================== -->
+
+<!-- FAJR -->
+
+<div class="prayer-card">
+
+    <div class="prayer-icon">
+        🌅
+    </div>
+
+    <div class="prayer-info">
+
+        <h3>Fajr</h3>
+
+        <b id="fajr">
+            Loading...
+        </b>
+
+        <span class="jamaat-icon">
+            🕌
+        </span>
+
+        <small id="fajrJamaat">
+            Jamaat Loading...
+        </small>
+
+    </div>
+
+    <button
+        class="edit-jamaat"
+        onclick="editJamaat('Fajr')">
+
+        <i class="fa-solid fa-pen"></i>
+
+    </button>
+
+</div>
+
+
+<!-- DHUHR -->
+
+<div class="prayer-card">
+
+    <div class="prayer-icon">
+        ☀️
+    </div>
+
+    <div class="prayer-info">
+
+        <h3>Dhuhr</h3>
+
+        <b id="dhuhr">
+            Loading...
+        </b>
+
+        <span class="jamaat-icon">
+            🕌
+        </span>
+
+        <small id="dhuhrJamaat">
+            Jamaat Loading...
+        </small>
+
+    </div>
+
+    <button
+        class="edit-jamaat"
+        onclick="editJamaat('Dhuhr')">
+
+        <i class="fa-solid fa-pen"></i>
+
+    </button>
+
+</div>
+
+
+<!-- ASR -->
+
+<div class="prayer-card">
+
+    <div class="prayer-icon">
+        🌇
+    </div>
+
+    <div class="prayer-info">
+
+        <h3>Asr</h3>
+
+        <b id="asr">
+            Loading...
+        </b>
+
+        <span class="jamaat-icon">
+            🕌
+        </span>
+
+        <small id="asrJamaat">
+            Jamaat Loading...
+        </small>
+
+    </div>
+
+    <button
+        class="edit-jamaat"
+        onclick="editJamaat('Asr')">
+
+        <i class="fa-solid fa-pen"></i>
+
+    </button>
+
+</div>
+
+
+<!-- MAGHRIB -->
+
+<div class="prayer-card">
+
+    <div class="prayer-icon">
+        🌙
+    </div>
+
+    <div class="prayer-info">
+
+        <h3>Maghrib</h3>
+
+        <b id="maghrib">
+            Loading...
+        </b>
+
+        <span class="jamaat-icon">
+            🕌
+        </span>
+
+        <small id="maghribJamaat">
+            Jamaat Loading...
+        </small>
+
+    </div>
+
+    <button
+        class="edit-jamaat"
+        onclick="editJamaat('Maghrib')">
+
+        <i class="fa-solid fa-pen"></i>
+
+    </button>
+
+</div>
+
+
+<!-- ISHA -->
+
+<div class="prayer-card">
+
+    <div class="prayer-icon">
+        🌌
+    </div>
+
+    <div class="prayer-info">
+
+        <h3>Isha</h3>
+
+        <b id="isha">
+            Loading...
+        </b>
+
+        <span class="jamaat-icon">
+            🕌
+        </span>
+
+        <small id="ishaJamaat">
+            Jamaat Loading...
+        </small>
+
+    </div>
+
+    <button
+        class="edit-jamaat"
+        onclick="editJamaat('Isha')">
+
+        <i class="fa-solid fa-pen"></i>
+
+    </button>
+
+</div>
+
+
+
+<!-- ===========================
+     BOTTOM NAVIGATION
+=========================== -->
+
+<nav class="bottom-nav">
+
+
+    <!-- HOME -->
+
+    <a href="index.html"
+       class="nav-item active">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>
+            Home
+        </span>
+
+    </a>
+
+
+    <!-- QURAN -->
+
+    <a href="quran/quran.html"
+       class="nav-item">
+
+        <i class="fa-solid fa-book-quran"></i>
+
+        <span>
+            Quran
+        </span>
+
+    </a>
+
+
+    <!-- DUAS -->
+
+    <a href="dua/duas.html"
+       class="nav-item">
+
+        <i class="fa-solid fa-hands-praying"></i>
+
+        <span>
+            Duas
+        </span>
+
+    </a>
+
+
+    <!-- 99 NAMES -->
+
+    <a href="names/names.html"
+       class="nav-item">
+
+        <i class="fa-solid fa-star-and-crescent"></i>
+
+        <span>
+            99 Names
+        </span>
+
+    </a>
+
+
+    <!-- TASBEEH -->
+
+    <a href="tasbeeh/tasbeeh.html"
+       class="nav-item">
+
+        <i class="fa-solid fa-ring"></i>
+
+        <span>
+            Tasbeeh
+        </span>
+
+    </a>
+
+
+    <!-- CAMPUS -->
+
+    <a href="campus/campus.html"
+       class="nav-item">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        <span>
+            Campus
+        </span>
+
+    </a>
+
 
 </nav>
 
 
+<!-- ===========================
+        FLOATING BUTTON
+=========================== -->
 
+<button
+    class="floating-btn"
+    id="notificationBtn"
+    title="Prayer Notifications">
 
-<!-- ======================
-     Hero Section
-====================== -->
+    <i class="fa-solid fa-bell"></i>
 
-<div class="hero">
+</button>
 
-    <img loading="lazy" src="f.jpg" alt="Faizullah Thaheem" class="hero-img">
+<!-- ===========================
+        LOADING SCREEN
+=========================== -->
 
-    <h1>Hi, I'm Faizullah Thaheem 👋</h1>
+<div id="loadingScreen">
 
-    <h2>Professional Electrician</h2>
+    <div class="loader"></div>
 
-    <p id="typing"></p>
+    <h3>
+        My Prayer
+    </h3>
 
-    
+    <p>
+        Loading...
+    </p>
 
-    <div class="hero-buttons">
+</div>
 
-        <a href="https://wa.me/923333237715" target="_blank">
-            <button class="hire-btn">💬 Hire Me</button>
-        </a>
+<!-- ===========================
+        EDIT JAMAAT MODAL
+=========================== -->
 
-        <a href="f.cv.png" download>
-            <button class="cv-btn">📄 Download CV</button>
-        </a>
+<div id="jamaatModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>
+            Edit Jamaat Time
+        </h2>
+
+        <p id="selectedPrayer">
+            Prayer
+        </p>
+
+        <input
+            type="time"
+            id="jamaatTimeInput">
+
+        <div class="modal-buttons">
+
+            <button
+                class="save-btn"
+                onclick="saveJamaatTime()">
+
+                Save
+
+            </button>
+
+            <button
+                class="cancel-btn"
+                onclick="closeJamaatModal()">
+
+                Cancel
+
+            </button>
+
+        </div>
 
     </div>
 
 </div>
 
-<div class="about" id="about">
+<!-- ===========================
+        NOTIFICATION MODAL
+=========================== -->
 
-<h2>👤 About Me</h2>
+<div id="notificationModal" class="modal">
 
-<p>
-I am Faizullah Thaheem, a Professional Electrician with experience in Electrical Installation, House Wiring, Industrial Electrical Maintenance and Troubleshooting. I am also learning Web Development.
-</p>
+    <div class="modal-content">
 
-</div>
+        <h2>
+            Prayer Notifications
+        </h2>
 
+        <p>
 
-<div class="skills" id="skills">
+            Enable notifications to receive prayer reminders.
 
+        </p>
 
-<h2>💪 My Skills</h2>
+        <div class="modal-buttons">
 
+            <button
+                class="save-btn"
+                id="enableNotification">
 
+                Enable
 
-<div class="skill-card">
+            </button>
 
-<h3>⚡ Electrical Installations</h3>
+            <button
+                class="cancel-btn"
+                onclick="closeNotificationModal()">
 
-<p>
-Electrical installation work and wiring systems.
-</p>
+                Close
 
-</div>
+            </button>
 
+        </div>
 
-
-<div class="skill-card">
-
-<h3>🏠 House Wiring</h3>
-
-<p>
-Complete house wiring and electrical fitting work.
-</p>
-
-</div>
-
-
-
-<div class="skill-card">
-
-<h3>🏭 Industrial Electrical Maintenance</h3>
-
-<p>
-Industrial checking, repair and maintenance work.
-</p>
+    </div>
 
 </div>
 
-
-
-<div class="skill-card">
-
-<h3>⚙ Generator Operation</h3>
-
-<p>
-Generator operation and troubleshooting.
-</p>
-
-</div>
-
-
-
-<div class="skill-card">
-
-<h3>🔧 Fault Finding</h3>
-
-<p>
-Electrical fault diagnosis and problem solving.
-</p>
-
-</div>
-
-
-
-<div class="skill-card">
-
-<h3>🛡 Safety Compliance</h3>
-
-<p>
-Following electrical safety rules and procedures.
-</p>
-
-</div>
-
-
-
-<div class="skill-card">
-
-<h3>💻 Web Development</h3>
-
-<p>
-Basic HTML, CSS and JavaScript website development.
-</p>
-
-</div>
-
-
-</div>
-
-
-
-<div class="services" id="services">
-
-
-<h2>🔧 My Services</h2>
-
-
-
-<div class="service-card">
-
-
-<h3>⚡ Electrical Services</h3>
-
-<p>
-Electrical Installation, House Wiring, Maintenance and Troubleshooting.
-</p>
-
-
-</div>
-
-
-
-<div class="service-card">
-
-
-<h3>🏭 Industrial Electrical Work</h3>
-
-<p>
-Industrial electrical maintenance and equipment checking.
-</p>
-
-
-</div>
-
-
-
-<div class="service-card">
-
-
-<h3>💻 Web Development</h3>
-
-<p>
-Basic professional website design using HTML, CSS and JavaScript.
-</p>
-
-
-</div>
-
-
-</div>
-<div class="gallery" id="gallery">
-
-
-<h2>📸 My Work Gallery</h2>
-
-<img loading="lazy" src="1.jpg" alt="Electrical Work">
-
-<img loading="lazy" src="2.jpg" alt="Electrical Work">
-
-<img loading="lazy" src="3.jpg" alt="Electrical Work">
-
-<img loading="lazy" src="4.jpg" alt="Electrical Work">
-
-<img loading="lazy" src="5.jpg" alt="Electrical Work">
-
-<img loading="lazy" src="6.jpg" alt="Electrical Work">
-
-<img loading="lazy" src="7.jpg" alt="Electrical Work">
-
-<img loading="lazy" src="8.jpg" alt="Electrical Work">
-
-
-
-</div>
-
-
-
-
-
-<div class="experience">
-
-
-<h2>⚡ My Experience</h2>
-
-
-
-<div class="timeline">
-
-
-
-<div class="timeline-item">
-
-
-<h3>Dec 2014 - Mar 2016</h3>
-
-
-<h4>⚡ Generator Operator</h4>
-
-
-<p>
-City Generator (Private Electricity Supplier) - Adilpur City
-</p>
-
-
-</div>
-
-
-
-
-<div class="timeline-item">
-
-
-<h3>Apr 2016 - Nov 2022</h3>
-
-
-<h4>🔧 Electrician</h4>
-
-
-<p>
-Chand Electrician Shop - Adilpur
-</p>
-
-
-</div>
-
-
-
-
-<div class="timeline-item">
-
-
-<h3>Dec 2022 - Mar 2023</h3>
-
-
-<h4>⚡ Electrician</h4>
-
-
-<p>
-SKB & Company - Mirpur Mathelo
-</p>
-
-
-</div>
-
-
-
-
-<div class="timeline-item">
-
-
-<h3>Jan 2024 - Feb 2024</h3>
-
-
-<h4>⚡ Electrician</h4>
-
-
-<p>
-Main A. Salam & Company - Daharki
-</p>
-
-
-</div>
-
-
-
-
-<div class="timeline-item">
-
-
-<h3>Jun 2025 - Jun 2026</h3>
-
-
-<h4>⚡ Electrician</h4>
-
-
-<p>
-SinoHydro Foundation Engineering Co. Ltd - Nabisar Vajihar Water Supply Project
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-<div class="education">
-
-
-<h2>🎓 My Education</h2>
-
-
-<p>
-✔ DAE Electrical Engineering (Apr 2023 - Oct 2025)
-</p>
-
-
-<p>
-✔ DTI Industrial Electrician (Mar 2025 - May 2025)
-</p>
-
-
-<p>
-✔ Trade Testing Board Electrician Training (Sep 2021 - Dec 2021)
-</p>
-
-
-<p>
-✔ Intermediate (2010 - 2012)
-</p>
-
-
-<p>
-✔ Matriculation (2006 - 2010)
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="certificates">
-
-
-<h2>🏆 My Certificates</h2>
-
-
-<p>
-✔ DAE Electrical Engineering Diploma
-</p>
-
-
-<p>
-✔ DESCON DTI Industrial Electrician Certificate
-</p>
-
-
-<p>
-✔ Trade Testing Board Sindh Electrician Certificate
-</p>
-
-
-<p>
-✔ Safety & Electrical Work Training
-</p>
-
-
-</div>
-<div class="tools">
-
-
-<h2>🛠 My Web Tools</h2>
-
-
-
-<div class="tool-card">
-
-
-<h3>🧮 Calculator</h3>
-
-
-<p>
-Simple calculator for daily calculations.
-</p>
-
-
-<a href="calculator.html">
-
-<button>
-Open Calculator
-</button>
-
-</a>
-
-
-</div>
-
-
-
-
-<div class="tool-card">
-
-
-<h3>⏰ Digital Clock</h3>
-
-
-<p>
-Live digital clock tool.
-</p>
-
-
-<a href="clock.html">
-
-<button>
-Open Clock
-</button>
-
-</a>
-
-
-</div>
-
-
-
-
-<div class="tool-card">
-
-
-<h3>✅ To-Do List</h3>
-
-
-<p>
-Manage your daily tasks easily.
-</p>
-
-
-<a href="todo.html">
-
-<button>
-Open To-Do
-</button>
-
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<div class="projects" id="projects">
-
-
-<h2>🚀 My Projects</h2>
-
-
-
-<div class="project-card">
-
-
-<h3>🌐 Personal Portfolio Website</h3>
-
-
-<p>
-Professional portfolio website using HTML, CSS and JavaScript.
-</p>
-
-
-</div>
-
-
-
-
-<div class="project-card">
-
-
-<h3>⚡ Electrician Portfolio</h3>
-
-
-<p>
-Website showing my electrical skills and services.
-</p>
-
-
-</div>
-
-
-
-
-<div class="project-card">
-
-
-<h3>💻 Learning Web Development</h3>
-
-
-<p>
-Practicing modern web development projects.
-</p>
-
-</div>
-
-</div>
-
-<div class="contact" id="contact">
-
-    <h2>📞 Contact Me</h2>
-
-    <p>📱 WhatsApp: +92 333 3237715</p>
-
-    <p>⚡ Available for Electrical Work and Web Development Projects.</p>
-
-    <a href="https://wa.me/923333237715" target="_blank">
-        <button>💬 Chat on WhatsApp</button>
-    </a>
-
-</div>
-
-
-</div>
-<div class="social">
-
-<h2>🌍 Follow Me</h2>
-
-<a href="https://facebook.com" target="_blank">
-<button>📘 Facebook</button>
-</a>
-
-<a href="https://instagram.com" target="_blank">
-<button>📷 Instagram</button>
-</a>
-
-<a href="https://linkedin.com" target="_blank">
-<button>💼 LinkedIn</button>
-</a>
-
-<a href="https://github.com" target="_blank">
-<button>💻 GitHub</button>
-</a>
-
-</div>
-
-
-
-
-
-
-<div class="visitors">
-
-<h2>👥 Visitors</h2>
-
-<p>Total Visitors</p>
-
-<p id="visitorCount"></p>
-
-</div>
-
-
-
-
-
-<footer>
-
-
-<p>
-© 2026 Faizullah Thaheem
-</p>
-
-
-<p>
-Electrician | Web Development Learner
-</p>
-
-
-<p>
-All Rights Reserved.
-</p>
-
+<!-- ===========================
+        APP VERSION
+=========================== -->
+
+<footer class="app-footer">
+
+    <p>
+        My Prayer v1.0.0
+    </p>
+
+    <small>
+        © 2026 My Prayer. All Rights Reserved.
+    </small>
 
 </footer>
 
+</div>
 
 
+<script src="index.js"></script>
 
-
-<button onclick="topFunction()" id="topBtn">
-
-⬆ Top
-
-</button>
-
-
-
-
-
-<script src="script.js"></script>
 
 
 </body>
-
 
 </html>
